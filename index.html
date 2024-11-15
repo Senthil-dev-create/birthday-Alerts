@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Calendar & Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Birthday Calendar & Tracker</h1>
+
+    <!-- Menu Navigation -->
+    <div class="menu">
+      <button onclick="showAddForm()">Add Birthday</button>
+      <button onclick="showBirthdayList()">Show Birthday List</button>
+    </div>
+
+    <!-- Add Birthday Form -->
+    <div id="addBirthdayForm" class="form-container" style="display:none;">
+      <h2>Add Birthday</h2>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter name">
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday">
+      <button onclick="addBirthday()">Add</button>
+      <button onclick="hideAddForm()">Cancel</button>
+    </div>
+
+    <!-- Birthday List -->
+    <div id="birthdayList" class="list-container" style="display:none;">
+      <h2>Birthday List</h2>
+      <ul id="birthdayListUl"></ul>
+      <button onclick="hideBirthdayList()">Back</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
